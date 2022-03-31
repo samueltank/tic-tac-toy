@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">tic-tac-toy</string>
+    <string name="btn_content">START</string>
+    <string name="desc_btn_exit">botão para sair do aplicativo</string>
+</resources>
