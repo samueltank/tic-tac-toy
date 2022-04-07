@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".splash_activity"
+            android:name=".modeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SimbolChoose"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
