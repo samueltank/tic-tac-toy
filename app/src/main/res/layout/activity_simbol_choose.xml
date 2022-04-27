@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SimbolChoose"
+    tools:context=".SymbolChoose"
     android:background="@color/white"
     android:gravity="top"
     android:orientation="vertical"
@@ -13,11 +13,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Qual seu símbolo?"
-        android:textColor="@color/black"
-        android:fontFamily="sans-serif-medium"
         android:layout_gravity="center"
-        android:textSize="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/title_chose_symbol"
+        android:textColor="@color/black"
+        android:textSize="24sp"
 
         />
 
@@ -35,26 +35,29 @@
         <ImageButton
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/ic_x_icon"
+            android:layout_marginEnd="30dp"
             android:background="@drawable/ic_o_icon"
             android:backgroundTint="@color/white"
-            android:layout_marginRight="30dp"
-            />
+            android:contentDescription='@string/desc_btn_x_desc'
+            android:src="@drawable/ic_x_icon"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:backgroundTint="@color/white"
+            android:contentDescription="@string/desc_btn_o_desc"
             android:src="@drawable/ic_o_icon"
-            />
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
     </LinearLayout>
 
     <ImageButton
         android:layout_width="170dp"
         android:layout_height="60dp"
-        android:src="@drawable/ic_btn_next"
-        android:backgroundTint="@color/purple_default"
         android:layout_gravity="center"
-        />
+        android:backgroundTint="@color/purple_default"
+        android:src="@drawable/ic_btn_next"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/btn_next_choose_desc" />
 
 </LinearLayout>

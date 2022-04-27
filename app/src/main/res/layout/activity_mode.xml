@@ -1,29 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modeActivity"
+    tools:context=".ModeActivity"
+    android:background="@color/white"
     android:gravity="top"
     android:orientation="vertical"
+    android:paddingTop="100dp"
     >
 
-    <ImageButton
+    <TextView
+        android:id="@+id/title_mode_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_back_btn_pvsp"
-        android:backgroundTint="@color/pink_default"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/title_modo_screen"
+        android:textColor="@color/black"
+        android:textSize="34sp"
         android:layout_gravity="center"
+        android:layout_marginBottom="100dp" />
 
-        />
 
     <ImageButton
+        android:id="@+id/btn_p_vs_p"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/pink_default"
+        android:contentDescription="@string/btn_player_vs_player_desc"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/ic_back_btn_pvs_p" />
+
+    <ImageButton
+        android:id="@+id/btn_p_vs_m"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="@color/pink_default"
+        android:contentDescription="@string/btn_player_vs_machine_desc"
+        android:src="@drawable/ic_player_vs_machine" />
+
+
+    <ImageButton
+        android:id="@+id/btn_confirm_mode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/"
-        android:backgroundTint="@color/pink_default"
-
+        android:layout_gravity="center"
+        android:src="@drawable/ic_btn_confirm_mode"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/btn_confirm_mode_desc" />
 
 </LinearLayout>

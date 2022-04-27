@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".modeActivity"
+            android:name=".PvsMActivity"
             android:exported="false" />
         <activity
-            android:name=".SimbolChoose"
+            android:name=".PvsPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ModeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SymbolChoose"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"

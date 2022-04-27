@@ -8,7 +8,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:gravity="right"
-    android:background="@drawable/ic_tela_inicial"
+    android:background="@drawable/ic_initial_screen"
 
     tools:ignore="RtlHardcoded"
     >

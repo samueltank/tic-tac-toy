@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".SplashActivity"
     android:gravity="center"
-    android:background="@drawable/ic_tela_splash"
+    android:background="@drawable/ic_splash_back"
     >
 
 </LinearLayout>

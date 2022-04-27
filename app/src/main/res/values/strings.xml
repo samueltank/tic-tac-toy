@@ -1,5 +1,27 @@
 <resources>
     <string name="app_name">tic-tac-toy</string>
     <string name="btn_content">START</string>
-    <string name="desc_btn_exit">botão para sair do aplicativo</string>
+    <string name="desc_btn_exit">Botão para sair do aplicativo</string>
+    <string name="desc_btn_x_desc">Botão de escolha do símbolo "X"</string>
+    <string name="desc_btn_o_desc">Botão de escolha do símbolo "O"</string>
+    <string name="title_chose_symbol">Qual será seu símbolo?</string>
+    <string name="btn_next_choose_desc">
+        Botão para avançar para a fazer de escolha de modo
+    </string>
+    <string name="btn_player_vs_player_desc">
+        Botão para jogar no modo player vs player
+    </string>
+    <string name="btn_player_vs_machine_desc">
+        Botão para jogar no modo player vs machine
+    </string>
+    <string name="title_modo_screen">Qual o modo?</string>
+    <string name="btn_confirm_mode_desc">
+        Botão para confirmar a seleção do modo
+    </string>
+    <string name="title_score_p1">Player1: X</string>
+    <string name="title_score_p2">Player2: O</string>
+    <string name="title_mode_machine_screen">Qual a dificuldade desejada?</string>
+    <string name="btn_ease">fácil</string>
+    <string name="btn_medium">médio</string>
+    <string name="btn_hard">impossible</string>
 </resources>
