@@ -17,8 +17,7 @@ class ModeActivity : AppCompatActivity() {
         btnPvsPMode.setOnClickListener { startModePvsP() }
 
         // botão de moto Player vs Machine
-        val btnPvsMMode: ImageButton = findViewById(R.id.btn_p_vs_m)
-        btnPvsMMode.setOnClickListener { startModePvsM() }
+        val btnPvsMmode = I
     }
 
     fun startModePvsP() {

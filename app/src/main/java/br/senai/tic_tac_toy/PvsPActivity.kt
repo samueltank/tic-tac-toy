@@ -164,11 +164,11 @@ class PvsPActivity : AppCompatActivity() {
                     .setMessage("\"X\" é o vencedor!\n\nVocê quer jogar novamente?")
                     .setPositiveButton("Sim") { dialog, which ->
                         startActivity(Intent(this, PvsPActivity::class.java))
+                        this.finish()
                     }.setNegativeButton("Não") { dialog, which ->
                         startActivity(Intent(this, MainActivity::class.java))
+                        this.finish()
                     }.create().show()
-
-                this.finish()
             }
 
             // anuncia vitória do jogador O
@@ -177,8 +177,10 @@ class PvsPActivity : AppCompatActivity() {
                     .setMessage("\"O\" é o vencedo!\n\nVocê quer jogar novamente?")
                     .setPositiveButton("Sim") { dialog, which ->
                         startActivity(Intent(this, PvsPActivity::class.java))
+                        this.finish()
                     }.setNegativeButton("Não") { dialog, which ->
                         startActivity(Intent(this, MainActivity::class.java))
+                        this.finish()
                     }.create().show()
 
                 this.finish()
@@ -190,8 +192,10 @@ class PvsPActivity : AppCompatActivity() {
                     .setMessage("Empatou!\n\nVocê quer jogar novamente?")
                     .setPositiveButton("Sim") { dialog, which ->
                         startActivity(Intent(this, PvsPActivity::class.java))
+                        this.finish()
                     }.setNegativeButton("Não") { dialog, which ->
                         startActivity(Intent(this, MainActivity::class.java))
+                        this.finish()
                     }.create().show()
 
                 this.finish()
