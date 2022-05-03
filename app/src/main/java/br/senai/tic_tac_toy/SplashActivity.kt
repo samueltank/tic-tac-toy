@@ -13,7 +13,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        Timer().schedule(2000) { openActivity() }
+        Timer().schedule(2500) { openActivity() }
     }
 
     private fun openActivity() {

@@ -4,15 +4,26 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 
 class PvsPActivity : AppCompatActivity() {
 
+    var player1: ArrayList<Int> = ArrayList()
+    var player2: ArrayList<Int> = ArrayList()
+    var    draw: ArrayList<Int> = ArrayList()
+
+    var activePlayer = 1
+
+    // cria o estado da instância
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pvs_pactivity)
+
+        // função para fechar voltar para a home do game
+        val btn_exit: ImageButton = findViewById(R.id.btn_exit_game_screen)
+        btn_exit.setOnClickListener { this.finish() }
 
         // captura os botões do Layout
         val btnSelected1: Button = findViewById(R.id.btnTicTac1)
@@ -25,7 +36,10 @@ class PvsPActivity : AppCompatActivity() {
         val btnSelected8: Button = findViewById(R.id.btnTicTac8)
         val btnSelected9: Button = findViewById(R.id.btnTicTac9)
 
-        // aplica os listeners de click para cada botão :<
+        // aplica os listeners de click para cada botão
+        /*
+        * Fazer de uma melhor forma...
+        * */
         btnSelected1.setOnClickListener { btnApplyID(btnSelected1) }
         btnSelected2.setOnClickListener { btnApplyID(btnSelected2) }
         btnSelected3.setOnClickListener { btnApplyID(btnSelected3) }
@@ -37,12 +51,8 @@ class PvsPActivity : AppCompatActivity() {
         btnSelected9.setOnClickListener { btnApplyID(btnSelected9) }
     }
 
-    fun applyClickListener() {
-
-    }
-
-    fun btnApplyID(view: View) {
-        val btnSelected = view as Button
+    fun btnApplyID(button: Button) {
+        val btnSelected = button
         var cellID: Int = 0
 
         when (btnSelected.id) {
@@ -62,12 +72,6 @@ class PvsPActivity : AppCompatActivity() {
         gameProcessor(cellID, btnSelected)
     }
 
-    var player1      = ArrayList<Int>()
-    var player2      = ArrayList<Int>()
-    var playerDraw   = ArrayList<Int>()
-
-    var activePlayer = 1
-
     fun gameProcessor(cellId: Int, btnSelected: Button) {
         if (activePlayer == 1 ) {
             btnSelected.setTextColor(Color.WHITE)
@@ -84,14 +88,14 @@ class PvsPActivity : AppCompatActivity() {
         }
 
         // player de empate recebe um id em cada click
-        playerDraw.add(cellId)
+        draw.add(cellId)
 
         btnSelected.isEnabled = false
         findWinner()
     }
 
     fun findWinner() {
-        var winner = -1
+        var winner = 0
 
         // verifica se há ganhador na linha 1
         val row1Values = ArrayList<Int>()
@@ -153,7 +157,7 @@ class PvsPActivity : AppCompatActivity() {
         val drawValues = ArrayList<Int>()
         for (i in 1..9) { drawValues.add(i) }
 
-        if (playerDraw.containsAll(drawValues)) { winner = 3 }
+        if (draw.containsAll(drawValues) && winner == 0) { winner = 3 }
 
         // verifica se há algum ganhador
         if (winner != 0) {
@@ -162,10 +166,10 @@ class PvsPActivity : AppCompatActivity() {
             if (winner == 1) {
                 AlertDialog.Builder(this).setTitle("Winner")
                     .setMessage("\"X\" é o vencedor!\n\nVocê quer jogar novamente?")
-                    .setPositiveButton("Sim") { dialog, which ->
+                    .setPositiveButton("Sim") { _,_ ->
                         startActivity(Intent(this, PvsPActivity::class.java))
                         this.finish()
-                    }.setNegativeButton("Não") { dialog, which ->
+                    }.setNegativeButton("Não") { _,_ ->
                         startActivity(Intent(this, MainActivity::class.java))
                         this.finish()
                     }.create().show()
@@ -175,30 +179,26 @@ class PvsPActivity : AppCompatActivity() {
             if (winner == 2) {
                 AlertDialog.Builder(this).setTitle("Winner")
                     .setMessage("\"O\" é o vencedo!\n\nVocê quer jogar novamente?")
-                    .setPositiveButton("Sim") { dialog, which ->
+                    .setPositiveButton("Sim") { _,_ ->
                         startActivity(Intent(this, PvsPActivity::class.java))
                         this.finish()
-                    }.setNegativeButton("Não") { dialog, which ->
+                    }.setNegativeButton("Não") { _,_ ->
                         startActivity(Intent(this, MainActivity::class.java))
                         this.finish()
                     }.create().show()
-
-                this.finish()
             }
 
             // anuncia empate
             if (winner == 3) {
                 AlertDialog.Builder(this).setTitle("Empate")
                     .setMessage("Empatou!\n\nVocê quer jogar novamente?")
-                    .setPositiveButton("Sim") { dialog, which ->
+                    .setPositiveButton("Sim") { _,_ ->
                         startActivity(Intent(this, PvsPActivity::class.java))
                         this.finish()
-                    }.setNegativeButton("Não") { dialog, which ->
+                    }.setNegativeButton("Não") { _,_ ->
                         startActivity(Intent(this, MainActivity::class.java))
                         this.finish()
                     }.create().show()
-
-                this.finish()
             }
         }
     }

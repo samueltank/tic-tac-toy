@@ -10,14 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".PvsMActivity"
+            android:name=".PvsMImpossibleActivity"
             android:exported="false" />
+        <!-- OFF bar -->
         <activity
-            android:name=".PvsPActivity"
-            android:exported="false" />
+            android:name=".PvsMMediumModeActivity"
+            android:exported="true" />
         <activity
             android:name=".ModeActivity"
-            android:exported="false" />
+            android:exported="true" />
+        <activity
+            android:name=".PvsMActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PvsPActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PvsMEaseModeActivity"
+            android:exported="true" />
         <activity
             android:name=".SymbolChoose"
             android:exported="false" />
@@ -25,18 +35,18 @@
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
     </application>

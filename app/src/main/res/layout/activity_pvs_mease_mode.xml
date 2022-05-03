@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".PvsPActivity">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="70dp"
+            android:gravity="center"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/title_score_p"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/title_score_player"
+                android:textColor="@color/purple_default"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/title_score_bot"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/title_score_Bot"
+                android:textColor="@color/pink_default"
+                android:textSize="28sp" />
+
+        </LinearLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center">
+
+            <Button
+                android:id="@+id/btnTicTac1"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@color/purple_light"
+                android:contentDescription="@string/btn_table_body"
+                android:text=""
+                android:textSize="60sp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <Button
+                android:id="@+id/btnTicTac2"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:background="@color/purple_light"
+                android:contentDescription="@string/btn_table_body"
+                android:text=""
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btnTicTac3"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:background="@color/purple_light"
+                android:contentDescription="@string/btn_table_body"
+                android:text=""
+                android:textSize="60sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center">
+
+            <Button
+                android:id="@+id/btnTicTac4"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/purple_light"
+                android:contentDescription="@string/btn_table_body"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btnTicTac5"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/purple_light"
+                android:contentDescription="@string/btn_table_body"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btnTicTac6"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/purple_light"
+                android:contentDescription="@string/btn_table_body"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="60sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center">
+
+            <Button
+                android:id="@+id/btnTicTac7"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/purple_light"
+                android:contentDescription="@string/btn_player_vs_player_desc"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btnTicTac8"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/purple_light"
+                android:contentDescription="@string/btn_table_body"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="60sp" />
+
+            <Button
+                android:id="@+id/btnTicTac9"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/purple_light"
+                android:contentDescription="@string/btn_table_body"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="60sp" />
+
+        </TableRow>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout3"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageButton
+                android:id="@+id/btn_exit_game_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/desc_btn_exit"
+                android:src="@drawable/btn_exit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

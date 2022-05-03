@@ -22,9 +22,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
             android:gravity="end"
-            android:textSize="18sp"
             android:text="@string/title_score_p1"
-            android:textColor="@color/black" />
+            android:textColor="@color/purple_default"
+            android:layout_marginEnd="5dp"
+            android:textSize="20sp"
+        />
 
         <TextView
             android:id="@+id/title_score_p2"
@@ -32,144 +34,150 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:textSize="18sp"
             android:text="@string/title_score_p2"
-            android:textColor="@color/black" />
+            android:textColor="@color/pink_default"
+            android:textSize="20sp"
+        />
 
     </LinearLayout>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="top|center"
         >
 
         <Button
             android:id="@+id/btnTicTac1"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:background="@color/purple_light"
-            android:textSize="60sp"
+            android:contentDescription="@string/btn_table_body"
             android:text=""
-            />
+            android:textSize="60sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btnTicTac2"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:background="@color/purple_light"
-            android:textSize="60sp"
+            android:contentDescription="@string/btn_table_body"
             android:text=""
-            />
+            android:textSize="60sp" />
 
         <Button
             android:id="@+id/btnTicTac3"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:background="@color/purple_light"
-            android:textSize="60sp"
+            android:contentDescription="@string/btn_table_body"
             android:text=""
-            />
+            android:textSize="60sp" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="top|center">
 
         <Button
             android:id="@+id/btnTicTac4"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:background="@color/purple_light"
-            android:textColor="#000000"
-            android:textSize="60dp"
+            android:contentDescription="@string/btn_table_body"
             android:text=""
-            android:onClick="btnApplyID"
-            tools:ignore="UsingOnClickInXml"
-            />
+            android:textColor="#000000"
+            android:textSize="60sp"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnTicTac5"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:background="@color/purple_light"
-            android:textColor="#000000"
-            android:textSize="60dp"
+            android:contentDescription="@string/btn_table_body"
             android:text=""
-            android:onClick="btnApplyID"
-            tools:ignore="UsingOnClickInXml"
-            />
+            android:textColor="#000000"
+            android:textSize="60sp"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnTicTac6"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:background="@color/purple_light"
-            android:textColor="#000000"
-            android:textSize="60dp"
+            android:contentDescription="@string/btn_table_body"
             android:text=""
-            android:onClick="btnApplyID"
-            tools:ignore="UsingOnClickInXml"
-            />
+            android:textColor="#000000"
+            android:textSize="60sp"
+            tools:ignore="UsingOnClickInXml" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="50dp"
-        android:gravity="center">
+        android:gravity="top|center">
 
         <Button
             android:id="@+id/btnTicTac7"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+
             android:layout_marginTop="5dp"
             android:background="@color/purple_light"
-            android:textColor="#000000"
-            android:textSize="60dp"
+            android:contentDescription="@string/btn_player_vs_player_desc"
             android:text=""
-            android:onClick="btnApplyID"
-            tools:ignore="UsingOnClickInXml"
-            />
+            android:textColor="#000000"
+            android:textSize="60sp"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnTicTac8"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:background="@color/purple_light"
-            android:textColor="#000000"
-            android:textSize="60dp"
+            android:contentDescription="@string/btn_table_body"
             android:text=""
-            android:onClick="btnApplyID"
-            tools:ignore="UsingOnClickInXml"
-            />
+            android:textColor="#000000"
+            android:textSize="60sp"
+            tools:ignore="UsingOnClickInXml" />
 
         <Button
             android:id="@+id/btnTicTac9"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:background="@color/purple_light"
-            android:textColor="#000000"
-            android:textSize="60dp"
+            android:contentDescription="@string/btn_table_body"
             android:text=""
-            android:onClick="btnApplyID"
-            tools:ignore="UsingOnClickInXml"
-            />
+            android:textColor="#000000"
+            android:textSize="60sp"
+            tools:ignore="UsingOnClickInXml" />
 
     </TableRow>
 
@@ -178,12 +186,12 @@
         >
 
         <ImageButton
-            android:id="@+id/btn10"
+            android:id="@+id/btn_exit_game_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/btn_exit"
             android:backgroundTint="@color/white"
-            />
+            android:contentDescription="@string/desc_btn_exit" />
 
     </LinearLayout>
 </TableLayout>

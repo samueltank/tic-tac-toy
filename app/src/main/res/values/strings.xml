@@ -14,14 +14,18 @@
     <string name="btn_player_vs_machine_desc">
         Botão para jogar no modo player vs machine
     </string>
-    <string name="title_modo_screen">Qual o modo?</string>
+    <string name="title_mode_screen">Qual o modo?</string>
     <string name="btn_confirm_mode_desc">
         Botão para confirmar a seleção do modo
     </string>
     <string name="title_score_p1">Player1: X</string>
     <string name="title_score_p2">Player2: O</string>
+    <string name="title_score_player">Player: X</string>
     <string name="title_mode_machine_screen">Qual a dificuldade desejada?</string>
     <string name="btn_ease">fácil</string>
     <string name="btn_medium">médio</string>
-    <string name="btn_hard">impossible</string>
+    <string name="btn_hard">インポッシブル</string>
+    <string name="bot_vector_image">Bot vector image</string>
+    <string name="btn_table_body">Célula da tabela, jogável</string>
+    <string name="title_score_Bot">Bot: O</string>
 </resources>

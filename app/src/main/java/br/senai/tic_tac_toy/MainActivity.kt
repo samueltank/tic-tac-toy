@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         val btnStart: Button      = findViewById(R.id.btnStart)
         val btnClose: ImageButton = findViewById(R.id.btnClose)
 
-        btnClose.setOnClickListener { this.finish() }
+        btnClose.setOnClickListener { finish() }
         btnStart.setOnClickListener { goGameScreen() }
     }
 
