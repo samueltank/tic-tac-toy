@@ -24,6 +24,7 @@ class PvsMMediumModeActivity : AppCompatActivity() {
     var arrValidateCell1Horizontal: ArrayList<Int> = ArrayList()
     var arrValidateCell1Diagonal1: ArrayList<Int> = ArrayList()
     var arrValidateCell2Vertical: ArrayList<Int> = ArrayList()
+    var arrValidateCell2Horizontal: ArrayList<Int> = ArrayList()
     var arrValidateCell3Vertical: ArrayList<Int> = ArrayList()
     var arrValidateCell3Horizontal: ArrayList<Int> = ArrayList()
     var arrValidateCell3Diagonal2: ArrayList<Int> = ArrayList()
@@ -76,6 +77,9 @@ class PvsMMediumModeActivity : AppCompatActivity() {
         // cell 2
         arrValidateCell2Vertical.add(5)
         arrValidateCell2Vertical.add(8)
+
+        arrValidateCell2Horizontal.add(1)
+        arrValidateCell2Horizontal.add(3)
 
         // cell 3
         arrValidateCell3Vertical.add(6)
@@ -213,8 +217,8 @@ class PvsMMediumModeActivity : AppCompatActivity() {
             playerMirror.add(cellID)
             arrCont.remove(cellID)
             activePlayer = 2
-            btnSelected.setTextColor(Color.WHITE)
             btnSelected.setBackgroundColor(Color.rgb(89,2, 236))
+            btnSelected.setTextColor(Color.WHITE)
             btnSelected.text = "X"
 
             // executa o bot
@@ -223,8 +227,8 @@ class PvsMMediumModeActivity : AppCompatActivity() {
             bot.add(cellID)
             arrCont.remove(cellID)
             activePlayer = 1
-            btnSelected.setTextColor(Color.WHITE)
             btnSelected.setBackgroundColor(Color.rgb(224, 77, 176))
+            btnSelected.setTextColor(Color.WHITE)
             btnSelected.text = "O"
         }
 
@@ -263,7 +267,8 @@ class PvsMMediumModeActivity : AppCompatActivity() {
 
                 // célula ID 2
                 if (
-                    playerMirror.containsAll(arrValidateCell2Vertical)
+                    playerMirror.containsAll(arrValidateCell2Vertical) ||
+                    playerMirror.containsAll(arrValidateCell2Horizontal)
                 ) {
                     if (!bot.contains(2)) ID = 2
                 }
@@ -433,7 +438,7 @@ class PvsMMediumModeActivity : AppCompatActivity() {
                 // anuncia vitória do jogador X (player)
                 if (winner == 1) {
                     AlertDialog.Builder(this).setTitle("Winner")
-                        .setMessage("\"X\" é o vencedor!\n\nVocê quer jogar novamente?")
+                        .setMessage("Parabéns! você é o vencedor!\n\nVocê quer jogar novamente?")
                         .setPositiveButton("Sim") { _,_ ->
                             startActivity(Intent(this, PvsMMediumModeActivity::class.java))
                             this.finish()
@@ -446,7 +451,7 @@ class PvsMMediumModeActivity : AppCompatActivity() {
                 // anuncia vitória do jogador O (bot)
                 if (winner == 2) {
                     AlertDialog.Builder(this).setTitle("Winner")
-                        .setMessage("\"O\" é o vencedo!\n\nVocê quer jogar novamente?")
+                        .setMessage("O BOT é o vencedor!\n\nVocê quer jogar novamente?")
                         .setPositiveButton("Sim") { _,_ ->
                             startActivity(Intent(this, PvsMMediumModeActivity::class.java))
                             this.finish()

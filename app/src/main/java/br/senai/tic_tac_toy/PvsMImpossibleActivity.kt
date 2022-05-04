@@ -2,6 +2,7 @@ package br.senai.tic_tac_toy
 
 import android.content.Intent
 import android.graphics.Color
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -24,6 +25,7 @@ class PvsMImpossibleActivity : AppCompatActivity() {
     var arrValidateCell1Horizontal: ArrayList<Int> = ArrayList()
     var arrValidateCell1Diagonal1: ArrayList<Int> = ArrayList()
     var arrValidateCell2Vertical: ArrayList<Int> = ArrayList()
+    var arrValidateCell2Horizontal: ArrayList<Int> = ArrayList()
     var arrValidateCell3Vertical: ArrayList<Int> = ArrayList()
     var arrValidateCell3Horizontal: ArrayList<Int> = ArrayList()
     var arrValidateCell3Diagonal2: ArrayList<Int> = ArrayList()
@@ -76,6 +78,9 @@ class PvsMImpossibleActivity : AppCompatActivity() {
         // cell 2
         arrValidateCell2Vertical.add(5)
         arrValidateCell2Vertical.add(8)
+
+        arrValidateCell2Horizontal.add(1)
+        arrValidateCell2Horizontal.add(3)
 
         // cell 3
         arrValidateCell3Vertical.add(6)
@@ -363,6 +368,78 @@ class PvsMImpossibleActivity : AppCompatActivity() {
                     if (!bot.contains(7)) ID = 7
                 }
 
+                if (
+                    ID == 0 &&
+                    bot.contains(4) &&
+                    bot.contains(5) &&
+                    !player.contains(6)
+                ) {
+                    if (!bot.contains(6)) ID = 6
+                }
+
+                if (
+                    ID == 0 &&
+                    bot.contains(3) &&
+                    bot.contains(5) &&
+                    !player.contains(7)
+                ) {
+                    if (!bot.contains(7)) ID = 7
+                }
+
+                if (
+                    ID == 0 &&
+                    bot.contains(2) &&
+                    bot.contains(3) &&
+                    !player.contains(1)
+                ) {
+                    if (!bot.contains(1)) ID = 1
+                }
+
+                if (
+                    ID == 0 &&
+                    bot.contains(5) &&
+                    bot.contains(6) &&
+                    !player.contains(4)
+                ) {
+                    if (!bot.contains(4)) ID = 4
+                }
+
+                if (
+                    ID == 0 &&
+                    bot.contains(8) &&
+                    bot.contains(9) &&
+                    !player.contains(7)
+                ) {
+                    if (!bot.contains(7)) ID = 7
+                }
+
+                if (
+                    ID == 0 &&
+                    bot.contains(4) &&
+                    bot.contains(7) &&
+                    !player.contains(1)
+                ) {
+                    if (!bot.contains(1)) ID = 1
+                }
+
+                if (
+                    ID == 0 &&
+                    bot.contains(5) &&
+                    bot.contains(9) &&
+                    !player.contains(1)
+                ) {
+                    if (!bot.contains(1)) ID = 1
+                }
+
+                if (
+                    ID == 0 &&
+                    bot.contains(5) &&
+                    bot.contains(7) &&
+                    !player.contains(3)
+                ) {
+                    if (!bot.contains(3)) ID = 3
+                }
+
                 // início sábio
                 if (player.size == 1) {
                     if (!player.contains(5)) {
@@ -392,7 +469,8 @@ class PvsMImpossibleActivity : AppCompatActivity() {
 
                     // célula ID 2
                     if (
-                        playerMirror.containsAll(arrValidateCell2Vertical)
+                        playerMirror.containsAll(arrValidateCell2Vertical) ||
+                        playerMirror.containsAll(arrValidateCell2Horizontal)
                     ) {
                         if (!bot.contains(2)) ID = 2
                     }
@@ -458,15 +536,21 @@ class PvsMImpossibleActivity : AppCompatActivity() {
                         if (!bot.contains(9)) ID = 9
                     }
 
+                    // combate às estratégias de dupla-mão
                     if (player.size == 2 && ID == 0) {
-                        if (!player.contains(2)) {
+                        if (
+                            !player.contains(2) &&
+                            player.contains(8) &&
+                            !player.contains(5) &&
+                            !player.contains(3)
+                        ) {
+                            ID = 3
+                        }  else if (!player.contains(9) && player.contains(5)) {
+                            ID = 9
+                        } else if (!player.contains(2)) {
                             ID = 2
-                        } else if (!player.contains(4)) {
-                            ID = 4
                         } else if (!player.contains(6)) {
                             ID = 6
-                        } else if (!player.contains(8)) {
-                            ID = 8
                         }
                     }
 
@@ -574,7 +658,7 @@ class PvsMImpossibleActivity : AppCompatActivity() {
                 // anuncia vitória do jogador X (player)
                 if (winner == 1) {
                     AlertDialog.Builder(this).setTitle("Winner")
-                        .setMessage("\"X\" é o vencedor!\n\nVocê quer jogar novamente?")
+                        .setMessage("PARABÉNS! você é o vencedor!\n\nVocê quer jogar novamente?")
                         .setPositiveButton("Sim") { _,_ ->
                             startActivity(Intent(this, PvsMImpossibleActivity::class.java))
                             this.finish()
@@ -587,7 +671,7 @@ class PvsMImpossibleActivity : AppCompatActivity() {
                 // anuncia vitória do jogador O (bot)
                 if (winner == 2) {
                     AlertDialog.Builder(this).setTitle("Winner")
-                        .setMessage("\"O\" é o vencedo!\n\nVocê quer jogar novamente?")
+                        .setMessage("O BOT é o VENCEDOR...!\n\nVocê quer jogar novamente?")
                         .setPositiveButton("Sim") { _,_ ->
                             startActivity(Intent(this, PvsMImpossibleActivity::class.java))
                             this.finish()
