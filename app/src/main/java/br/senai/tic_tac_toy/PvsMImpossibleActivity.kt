@@ -15,36 +15,36 @@ import kotlin.math.abs
 
 class PvsMImpossibleActivity : AppCompatActivity() {
 
-    var player: ArrayList<Int> = ArrayList()
+    var player: ArrayList<Int>       = ArrayList()
     var playerMirror: ArrayList<Int> = ArrayList()
-    var bot: ArrayList<Int> = ArrayList()
-    var draw: ArrayList<Int> = ArrayList()
-    var arrCont: ArrayList<Int> = ArrayList()
+    var bot: ArrayList<Int>          = ArrayList()
+    var draw: ArrayList<Int>         = ArrayList()
+    var arrCont: ArrayList<Int>      = ArrayList()
 
-    var arrValidateCell1Vertical: ArrayList<Int> = ArrayList()
+    var arrValidateCell1Vertical: ArrayList<Int>   = ArrayList()
     var arrValidateCell1Horizontal: ArrayList<Int> = ArrayList()
-    var arrValidateCell1Diagonal1: ArrayList<Int> = ArrayList()
-    var arrValidateCell2Vertical: ArrayList<Int> = ArrayList()
+    var arrValidateCell1Diagonal1: ArrayList<Int>  = ArrayList()
+    var arrValidateCell2Vertical: ArrayList<Int>   = ArrayList()
     var arrValidateCell2Horizontal: ArrayList<Int> = ArrayList()
-    var arrValidateCell3Vertical: ArrayList<Int> = ArrayList()
+    var arrValidateCell3Vertical: ArrayList<Int>   = ArrayList()
     var arrValidateCell3Horizontal: ArrayList<Int> = ArrayList()
-    var arrValidateCell3Diagonal2: ArrayList<Int> = ArrayList()
+    var arrValidateCell3Diagonal2: ArrayList<Int>  = ArrayList()
     var arrValidateCell4Horizontal: ArrayList<Int> = ArrayList()
-    var arrValidateCell4Vertical: ArrayList<Int> = ArrayList()
-    var arrValidateCell5Vertical: ArrayList<Int> = ArrayList()
+    var arrValidateCell4Vertical: ArrayList<Int>   = ArrayList()
+    var arrValidateCell5Vertical: ArrayList<Int>   = ArrayList()
     var arrValidateCell5Horizontal: ArrayList<Int> = ArrayList()
-    var arrValidateCell5Diagonal1: ArrayList<Int> = ArrayList()
-    var arrValidateCell5Diagonal2: ArrayList<Int> = ArrayList()
+    var arrValidateCell5Diagonal1: ArrayList<Int>  = ArrayList()
+    var arrValidateCell5Diagonal2: ArrayList<Int>  = ArrayList()
     var arrValidateCell6Horizontal: ArrayList<Int> = ArrayList()
-    var arrValidateCell6Vertical: ArrayList<Int> = ArrayList()
-    var arrValidateCell7Vertical: ArrayList<Int> = ArrayList()
+    var arrValidateCell6Vertical: ArrayList<Int>   = ArrayList()
+    var arrValidateCell7Vertical: ArrayList<Int>   = ArrayList()
     var arrValidateCell7Horizontal: ArrayList<Int> = ArrayList()
-    var arrValidateCell7Diagonal2: ArrayList<Int> = ArrayList()
-    var arrValidateCell8Vertical: ArrayList<Int> = ArrayList()
+    var arrValidateCell7Diagonal2: ArrayList<Int>  = ArrayList()
+    var arrValidateCell8Vertical: ArrayList<Int>   = ArrayList()
     var arrValidateCell8Horizontal: ArrayList<Int> = ArrayList()
-    var arrValidateCell9Vertical: ArrayList<Int> = ArrayList()
+    var arrValidateCell9Vertical: ArrayList<Int>   = ArrayList()
     var arrValidateCell9Horizontal: ArrayList<Int> = ArrayList()
-    var arrValidateCell9Diagonal1: ArrayList<Int> = ArrayList()
+    var arrValidateCell9Diagonal1: ArrayList<Int>  = ArrayList()
 
 
     // sem ser lateinit, há excessão porque a activity é static before onCreate
@@ -460,7 +460,7 @@ class PvsMImpossibleActivity : AppCompatActivity() {
 
                     // célula ID 1
                     if (
-                        playerMirror.containsAll(arrValidateCell1Vertical) ||
+                        playerMirror.containsAll(arrValidateCell1Vertical)   ||
                         playerMirror.containsAll(arrValidateCell1Horizontal) ||
                         playerMirror.containsAll(arrValidateCell1Diagonal1)
                     ) {
@@ -477,7 +477,7 @@ class PvsMImpossibleActivity : AppCompatActivity() {
 
                     // célula ID 3
                     if (
-                        playerMirror.containsAll(arrValidateCell3Vertical) ||
+                        playerMirror.containsAll(arrValidateCell3Vertical)   ||
                         playerMirror.containsAll(arrValidateCell3Horizontal) ||
                         playerMirror.containsAll(arrValidateCell3Diagonal2)
                     ) {
@@ -495,8 +495,8 @@ class PvsMImpossibleActivity : AppCompatActivity() {
                     // célula ID 5
                     if (
                         playerMirror.containsAll(arrValidateCell5Horizontal) ||
-                        playerMirror.containsAll(arrValidateCell5Vertical) ||
-                        playerMirror.containsAll(arrValidateCell5Diagonal1) ||
+                        playerMirror.containsAll(arrValidateCell5Vertical)   ||
+                        playerMirror.containsAll(arrValidateCell5Diagonal1)  ||
                         playerMirror.containsAll(arrValidateCell5Diagonal2)
                     ) {
                         if (!bot.contains(5)) ID = 5
@@ -512,7 +512,7 @@ class PvsMImpossibleActivity : AppCompatActivity() {
 
                     // célula ID 7
                     if (
-                        playerMirror.containsAll(arrValidateCell7Vertical) ||
+                        playerMirror.containsAll(arrValidateCell7Vertical)   ||
                         playerMirror.containsAll(arrValidateCell7Horizontal) ||
                         playerMirror.containsAll(arrValidateCell7Diagonal2)
                     ) {
@@ -529,7 +529,7 @@ class PvsMImpossibleActivity : AppCompatActivity() {
 
                     // célula ID 9
                     if (
-                        playerMirror.containsAll(arrValidateCell9Vertical) ||
+                        playerMirror.containsAll(arrValidateCell9Vertical)   ||
                         playerMirror.containsAll(arrValidateCell9Horizontal) ||
                         playerMirror.containsAll(arrValidateCell9Diagonal1)
                     ) {

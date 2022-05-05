@@ -242,7 +242,7 @@ class PvsMEaseModeActivity : AppCompatActivity() {
             // anuncia vitória do jogador O (bot)
             if (winner == 2) {
                 AlertDialog.Builder(this).setTitle("Winner")
-                    .setMessage("\"O\" é o vencedo!\n\nVocê quer jogar novamente?")
+                    .setMessage("O BOT é o vencedo!\n\nVocê quer jogar novamente?")
                     .setPositiveButton("Sim") { _,_ ->
                         startActivity(Intent(this, PvsMEaseModeActivity::class.java))
                         this.finish()
